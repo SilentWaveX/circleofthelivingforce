@@ -5,7 +5,7 @@
   <title>Круг ЖиваЯ СИЛА!</title>
   <style>
     body { font-family: sans-serif; padding: 2em; background: #fdf6e3; text-align: center; }
-    .form-box { display: inline-block; padding: 2em; border: 2px solid #e68a00; border-radius: 12px; }
+    .form-box { display: inline-block; padding: 2em; border: 2px solid #e68a00; border-radius: 12px; max-width: 400px; }
     button:disabled { background-color: #aaa; }
     button {
       margin-top: 1.5em;
@@ -17,17 +17,34 @@
       border-radius: 50px;
       cursor: pointer;
     }
+    input {
+      padding: 0.8em;
+      width: 100%;
+      margin-top: 1em;
+      font-size: 1em;
+    }
+    small { color: #a00; }
   </style>
 </head>
 <body>
 
   <div class="form-box">
+    <h2>Регистрация в Круге</h2>
+
     <label>
       <input type="checkbox" id="ageConfirm" style="display:none;">
       <button id="ageBtn">18+</button>
     </label>
+
     <br>
-    <button id="enterBtn" disabled>Войти в Круг</button>
+
+    <label for="reward"><strong>Моё Вознаграждение</strong></label><br>
+    <input type="text" id="reward" name="reward" placeholder="Карта, кошелёк, PayPal и т.д." required>
+    <br>
+    <small>⚠️ Введите внимательно. Изменить будет нельзя.</small>
+    <br><br>
+
+    <button id="enterBtn" disabled>Стать в Круг</button>
   </div>
 
   <script>
@@ -40,10 +57,14 @@
     });
 
     enterBtn.addEventListener('click', () => {
-      window.location.href = "register.html"; // или будущая следующая страница
+      const reward = document.getElementById('reward').value.trim();
+      if (!reward) {
+        alert("Пожалуйста, введите реквизиты для получения вознаграждения.");
+        return;
+      }
+      window.location.href = "register.html"; // Можно заменить позже
     });
   </script>
 
 </body>
 </html>
-Add minimal 18+ entry button
