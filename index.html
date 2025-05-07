@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circle of the Living Force</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .language-switcher { margin: 20px; }
+  </style>
+</head>
+<body>
+  <div class="language-switcher">
+    <button onclick="switchLanguage('en')">English</button>
+    <button onclick="switchLanguage('ru')">Русский</button>
+  </div>
+
+  <h1 id="title">Welcome to Circle of the Living Force!</h1>
+  <p id="content">This is a seed of something greater. 🌱</p>
+
+  <script>
+    function switchLanguage(lang) {
+      if (lang === 'en') {
+        document.getElementById('title').textContent = 'Welcome to Circle of the Living Force!';
+        document.getElementById('content').textContent = 'This is a seed of something greater. 🌱';
+      } else if (lang === 'ru') {
+        document.getElementById('title').textContent = 'Добро пожаловать в Круг Живой Силы!';
+        document.getElementById('content').textContent = 'Это семя чего-то большего. 🌱';
+      }
+    }
+  </script>
+</body>
+</html>
