@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Circle of the Living Force</title>
+  <title>Круг ЖиваЯ СИЛА!</title>
   <style>
-    body { font-family: Arial, sans-serif; }
-    .language-switcher { margin: 20px; }
+    body { font-family: sans-serif; padding: 2em; background: #fdf6e3; text-align: center; }
+    .form-box { display: inline-block; padding: 2em; border: 2px solid #e68a00; border-radius: 12px; }
+    button:disabled { background-color: #aaa; }
+    button {
+      margin-top: 1.5em;
+      padding: 1em 2em;
+      background: #e60000;
+      color: white;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <div class="language-switcher">
-    <button onclick="switchLanguage('en')">English</button>
-    <button onclick="switchLanguage('ru')">Русский</button>
+
+  <div class="form-box">
+    <label>
+      <input type="checkbox" id="ageConfirm" style="display:none;">
+      <button id="ageBtn">18+</button>
+    </label>
+    <br>
+    <button id="enterBtn" disabled>Войти в Круг</button>
   </div>
 
-  <h1 id="title">Welcome to Circle of the Living Force!</h1>
-  <p id="content">This is a seed of something greater. 🌱</p>
-
   <script>
-    function switchLanguage(lang) {
-      if (lang === 'en') {
-        document.getElementById('title').textContent = 'Welcome to Circle of the Living Force!';
-        document.getElementById('content').textContent = 'This is a seed of something greater. 🌱';
-      } else if (lang === 'ru') {
-        document.getElementById('title').textContent = 'Добро пожаловать в Круг Живой Силы!';
-        document.getElementById('content').textContent = 'Это семя чего-то большего. 🌱';
-      }
-    }
+    const ageBtn = document.getElementById('ageBtn');
+    const enterBtn = document.getElementById('enterBtn');
+
+    ageBtn.addEventListener('click', () => {
+      ageBtn.disabled = true;
+      enterBtn.disabled = false;
+    });
+
+    enterBtn.addEventListener('click', () => {
+      window.location.href = "register.html"; // или будущая следующая страница
+    });
   </script>
+
 </body>
 </html>
+Add minimal 18+ entry button
