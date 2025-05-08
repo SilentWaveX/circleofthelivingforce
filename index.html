@@ -19,10 +19,9 @@
     </div>
 
     <!-- Main panel (initially hidden) -->
-    <div id="mainPanel" class="hidden flex flex-col min-h-screen">
+    <div id="mainPanel" class="hidden flex flex-col min-h-screen bg-black">
       <nav class="bg-gray-900 text-white p-4 flex justify-center gap-4 text-lg">
         <a href="#" class="hover:text-yellow-400">Home</a>
-        <!-- "Shared Wisdom" is initially hidden, will appear after registration -->
         <a href="#" id="sharedWisdomBtn" class="hover:text-yellow-400 hidden">Shared Wisdom</a>
         <a href="#" class="hover:text-yellow-400">About Us</a>
         <a href="#" class="hover:text-yellow-400">Faq</a>
@@ -31,8 +30,8 @@
         <a href="#" class="hover:text-yellow-400">Signup</a>
       </nav>
 
-      <div class="flex-grow flex items-center justify-center">
-        <p class="text-xl">Welcome to the Circle...</p>
+      <div class="flex-grow flex items-center justify-center text-xl">
+        <p>Welcome to the Circle...</p>
       </div>
     </div>
 
@@ -44,16 +43,13 @@
         document.getElementById('sharedWisdomBtn').classList.add('hidden'); // Make sure Shared Wisdom is hidden initially
       });
 
-      // Here you would handle the logic for when the user has completed the registration and actions
-      // Example of how to reveal "Shared Wisdom" after the registration is done:
+      // Logic for showing Shared Wisdom after registration
       function showSharedWisdom() {
         document.getElementById('sharedWisdomBtn').classList.remove('hidden');
       }
 
-      // For testing purposes, you could simulate the user completing the steps:
-      // Simulate the user registering and completing actions
-      // Uncomment the next line to see the result immediately
-      // showSharedWisdom(); 
+      // Simulate user registration (uncomment to test)
+      // showSharedWisdom();
     </script>
 
   </body>
