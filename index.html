@@ -3,148 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Circle of the Living FORCE!</title>
     <style>
-        /* Basic styles for the site */
+        /* Main style */
         body {
+            background-color: black;
+            color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
         }
 
-        header {
-            background-color: #4CAF50;
-            padding: 20px;
+        /* Website header */
+        header h1 {
             text-align: center;
-            color: white;
+            font-size: 36px;
+            margin-top: 50px;
         }
 
-        h1 {
-            font-size: 2.5em;
+        header .highlight {
+            color: yellow;
         }
 
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
+        /* Access Button */
+        .access-button {
+            display: block;
+            margin: 30px auto;
+            background-color: yellow;
+            color: black;
+            font-size: 18px;
             padding: 10px 20px;
-            font-size: 1em;
+            border: none;
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #45a049;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        /* Navigation Panel */
+        .navigation {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
+        .navigation button {
+            background-color: black;
             color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
+            border: 2px solid white;
+            padding: 10px 20px;
+            cursor: pointer;
         }
 
-        footer {
+        /* Shared Wisdom Button */
+        .shared-wisdom-button {
+            background-color: black;
+            color: white;
+        }
+
+        /* Registration Form */
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .registration-form label {
+            font-size: 14px;
+            color: white;
+        }
+
+        .registration-form input {
+            padding: 10px;
+            border: 1px solid white;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Sign Up Button */
+        .signup-button {
+            background-color: yellow;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Post Registration Style */
+        .post-registration {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .post-registration button {
+            background-color: yellow;
+            color: black;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        /* Referral Link */
+        .referral-link {
             text-align: center;
             margin-top: 20px;
         }
 
-        footer button {
-            margin: 10px;
+        .referral-link-text {
+            color: yellow;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <!-- Main page -->
-    <header>
-        <h1>Circle of the Living FORCE!</h1>
-        <button id="accessBtn" class="button">Access</button>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#login">Login</a></li>
-            <li><a href="#signup">Signup</a></li>
-        </ul>
-    </nav>
+    <!-- Main Page -->
+    <div class="container">
+        <header>
+            <h1>Circle of the Living <span class="highlight">FORCE</span></h1>
+            <button class="access-button">Access</button>
+        </header>
 
-    <section id="signup">
-        <h2>Signup</h2>
-        <form id="signupForm">
-            <input type="text" id="name" placeholder="Name">
-            <input type="email" id="email" placeholder="Phone or Email">
-            <input type="password" id="password" placeholder="Define Password">
-            <input type="password" id="confirmPassword" placeholder="Retype Password">
-            <input type="text" id="secretQuestion" placeholder="Secret Question">
-            <input type="text" id="secretAnswer" placeholder="Secret Answer">
-            <button type="submit">Sign Up</button>
-        </form>
-    </section>
+        <!-- Navigation panel after registration -->
+        <nav class="navigation">
+            <button class="home-button">Home</button>
+            <button class="shared-wisdom-button">Shared Wisdom</button>
+        </nav>
 
-    <footer>
-        <div id="languageToggle">
-            <button id="enBtn">EN</button>
-            <button id="ruBtn">RU</button>
+        <!-- Registration Page -->
+        <div class="registration-form">
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Phone | Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Define Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="retype-password">Retype Password:</label>
+                <input type="password" id="retype-password" name="retype-password" required>
+                <label for="secret-question">Secret Question:</label>
+                <input type="text" id="secret-question" name="secret-question" required>
+                <label for="secret-answer">Secret Answer:</label>
+                <input type="text" id="secret-answer" name="secret-answer" required>
+                <button type="submit" class="signup-button">Sign Up</button>
+            </form>
         </div>
-    </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const languageToggle = document.getElementById('languageToggle');
-            const enBtn = document.getElementById('enBtn');
-            const ruBtn = document.getElementById('ruBtn');
-            const accessBtn = document.getElementById('accessBtn');
-            const signupForm = document.getElementById('signupForm');
+        <!-- After Registration -->
+        <div class="post-registration">
+            <button class="button-18plus">18+</button>
+            <button class="button-my-legacy">My Legacy</button>
+            <button class="button-join-circle">Join the Circle</button>
+        </div>
 
-            // Language toggle
-            enBtn.addEventListener('click', () => {
-                changeLanguage('en');
-            });
+        <!-- Referral Link -->
+        <div class="referral-link">
+            <p>Your referral link: <a href="#" class="referral-link-text">Referral Link</a></p>
+        </div>
+    </div>
 
-            ruBtn.addEventListener('click', () => {
-                changeLanguage('ru');
-            });
-
-            // Change language function
-            function changeLanguage(language) {
-                if (language === 'en') {
-                    document.title = "Circle of the Living FORCE!";
-                    accessBtn.innerText = "Access";
-                    signupForm.querySelector('button').innerText = 'Sign Up';
-                } else if (language === 'ru') {
-                    document.title = "Круг Живая Сила!";
-                    accessBtn.innerText = "Вход";
-                    signupForm.querySelector('button').innerText = 'Зарегистрироваться';
-                }
-            }
-
-            // Example of form handling
-            signupForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert("Registration complete!");
-                // Logic for sending data can go here
-            });
-        });
-    </script>
 </body>
 </html>
       
