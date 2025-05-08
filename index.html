@@ -1,78 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Circle of the Living FORCE!</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #0d0d0d;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Circle of the Living FORCE!</title>
+    <style>
+        /* Basic styles for the site */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      letter-spacing: 1px;
-      color: #f5f5f5;
-    }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
 
-    /* Apply yellow color to "FORCE" */
-    h1 span {
-      color: #ffcc00; /* Yellow for "FORCE" */
-    }
+        h1 {
+            font-size: 2.5em;
+        }
 
-    .access-button {
-      background-color: #ffcc00; /* Yellow button background */
-      color: black;
-      padding: 1rem 2rem;
-      border: 1px solid white;
-      font-size: 1.2rem;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-    }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
 
-    .access-button:hover {
-      background-color: #e6b800; /* Darker yellow on hover */
-    }
+        button:hover {
+            background-color: #45a049;
+        }
 
-    .lang-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 0.9rem;
-    }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
 
-    .lang-toggle a {
-      color: #ccc;
-      margin-left: 0.5rem;
-      text-decoration: none;
-    }
+        nav ul li {
+            margin: 0 15px;
+        }
 
-    .lang-toggle a:hover {
-      color: white;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
 
-    nav {
-      display: none;
-    }
-  </style>
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer button {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-  <div class="lang-toggle">
-    <span>Language:</span>
-    <a href="#">En</a> | <a href="#">Ru</a>
-  </div>
+    <!-- Main page -->
+    <header>
+        <h1>Circle of the Living FORCE!</h1>
+        <button id="accessBtn" class="button">Access</button>
+    </header>
 
-  <h1>Circle of the Living <span>FORCE!</span></h1> <!-- "FORCE" is now yellow -->
-  <button class="access-button" onclick="window.location.href='nextpage.html'">Access</button> <!-- Yellow button -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#signup">Signup</a></li>
+        </ul>
+    </nav>
+
+    <section id="signup">
+        <h2>Signup</h2>
+        <form id="signupForm">
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Phone or Email">
+            <input type="password" id="password" placeholder="Define Password">
+            <input type="password" id="confirmPassword" placeholder="Retype Password">
+            <input type="text" id="secretQuestion" placeholder="Secret Question">
+            <input type="text" id="secretAnswer" placeholder="Secret Answer">
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <footer>
+        <div id="languageToggle">
+            <button id="enBtn">EN</button>
+            <button id="ruBtn">RU</button>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const languageToggle = document.getElementById('languageToggle');
+            const enBtn = document.getElementById('enBtn');
+            const ruBtn = document.getElementById('ruBtn');
+            const accessBtn = document.getElementById('accessBtn');
+            const signupForm = document.getElementById('signupForm');
+
+            // Language toggle
+            enBtn.addEventListener('click', () => {
+                changeLanguage('en');
+            });
+
+            ruBtn.addEventListener('click', () => {
+                changeLanguage('ru');
+            });
+
+            // Change language function
+            function changeLanguage(language) {
+                if (language === 'en') {
+                    document.title = "Circle of the Living FORCE!";
+                    accessBtn.innerText = "Access";
+                    signupForm.querySelector('button').innerText = 'Sign Up';
+                } else if (language === 'ru') {
+                    document.title = "Круг Живая Сила!";
+                    accessBtn.innerText = "Вход";
+                    signupForm.querySelector('button').innerText = 'Зарегистрироваться';
+                }
+            }
+
+            // Example of form handling
+            signupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert("Registration complete!");
+                // Logic for sending data can go here
+            });
+        });
+    </script>
 </body>
 </html>
