@@ -1,70 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Круг ЖиваЯ СИЛА!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Circle of the Living FORCE!</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    body { font-family: sans-serif; padding: 2em; background: #fdf6e3; text-align: center; }
-    .form-box { display: inline-block; padding: 2em; border: 2px solid #e68a00; border-radius: 12px; max-width: 400px; }
-    button:disabled { background-color: #aaa; }
-    button {
-      margin-top: 1.5em;
-      padding: 1em 2em;
-      background: #e60000;
-      color: white;
-      font-size: 1.5em;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
+    body {
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
     }
-    input {
-      padding: 0.8em;
-      width: 100%;
-      margin-top: 1em;
-      font-size: 1em;
-    }
-    small { color: #a00; }
   </style>
 </head>
-<body>
-
-  <div class="form-box">
-    <h2>Регистрация в Круге</h2>
-
-    <label>
-      <input type="checkbox" id="ageConfirm" style="display:none;">
-      <button id="ageBtn">18+</button>
-    </label>
-
-    <br>
-
-    <label for="reward"><strong>Моё Вознаграждение</strong></label><br>
-    <input type="text" id="reward" name="reward" placeholder="Карта, кошелёк, PayPal и т.д." required>
-    <br>
-    <small>⚠️ Введите внимательно. Изменить будет нельзя.</small>
-    <br><br>
-
-    <button id="enterBtn" disabled>Стать в Круг</button>
+<body class="text-white font-sans">
+  <div class="flex justify-end p-4">
+    <button class="text-sm underline hover:text-gray-400">En | Ru</button>
   </div>
 
-  <script>
-    const ageBtn = document.getElementById('ageBtn');
-    const enterBtn = document.getElementById('enterBtn');
-
-    ageBtn.addEventListener('click', () => {
-      ageBtn.disabled = true;
-      enterBtn.disabled = false;
-    });
-
-    enterBtn.addEventListener('click', () => {
-      const reward = document.getElementById('reward').value.trim();
-      if (!reward) {
-        alert("Пожалуйста, введите реквизиты для получения вознаграждения.");
-        return;
-      }
-      window.location.href = "register.html"; // Можно заменить позже
-    });
-  </script>
-
+  <div class="flex flex-col items-center justify-center min-h-screen -mt-16">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center">
+      Circle of the Living <span class="text-yellow-400">FORCE!</span>
+    </h1>
+    <a href="access.html" class="mt-4 px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-full shadow-lg transition">
+      Access
+    </a>
+  </div>
 </body>
 </html>
