@@ -29,6 +29,10 @@
         <a href="#" class="hover:text-yellow-400">Signup</a>
         <a href="#" class="hover:text-yellow-400">Shared Wisdom</a>
       </nav>
+      <!-- Shared Wisdom появляется под Home, когда участник зарегистрирован -->
+<div id="sharedWisdomBlock" style="display: none;" class="bg-gray-900 text-white p-4 text-lg text-center">
+  <a href="#" class="hover:text-yellow-400">Shared Wisdom</a>
+</div>
       <div class="flex-grow flex items-center justify-center">
         <p class="text-xl">Welcome to the Circle...</p>
       </div>
@@ -39,6 +43,7 @@
       document.getElementById('accessBtn').addEventListener('click', () => {
         document.getElementById('landing').style.display = 'none';
         document.getElementById('mainPanel').style.display = 'flex';
+        document.getElementById('sharedWisdomBlock').style.display = 'block';
       });
     </script>
 
