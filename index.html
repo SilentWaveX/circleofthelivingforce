@@ -2,79 +2,100 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Circle of the Living FORCE!</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-black text-white min-h-screen">
-
-    <!-- Main landing section -->
-    <div id="landing" class="flex flex-col items-center justify-center min-h-screen">
-      <h1 class="text-4xl md:text-6xl font-bold mb-8">
-        Circle of the Living <span class="text-yellow-400">FORCE!</span>
-      </h1>
-      <button id="accessBtn" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-6 rounded-full">
-        Access
-      </button>
-    </div>
-
-    <!-- Main panel (initially hidden) -->
-    <div id="mainPanel" class="hidden flex flex-col min-h-screen bg-black">
-      <!-- Navigation panel with black background -->
-      <nav class="bg-black text-white p-4 flex flex-wrap justify-center gap-4 text-lg">
-        <a href="#" class="hover:text-yellow-400">Home</a>
-        <a href="#" id="sharedWisdomBtn" class="hover:text-yellow-400 hidden">Shared Wisdom</a>
-        <a href="#" class="hover:text-yellow-400">About Us</a>
-        <a href="#" class="hover:text-yellow-400">Faq</a>
-        <a href="#" class="hover:text-yellow-400">Contact us</a>
-        <a href="#" class="hover:text-yellow-400">Login</a>
-        <a href="#" class="hover:text-yellow-400">Signup</a>
-      </nav>
-
-      <div class="flex-grow flex items-center justify-center text-xl">
-        <p>Welcome to the Circle...</p>
-      </div>
-    </div>
-
-    <script>
-      // Show panel after clicking Access
-      document.getElementById('accessBtn').addEventListener('click', () => {
-        document.getElementById('landing').style.display = 'none';
-        document.getElementById('mainPanel').style.display = 'flex';
-        document.getElementById('sharedWisdomBtn').classList.add('hidden'); // Make sure Shared Wisdom is hidden initially
-      });
-
-      // Logic for showing Shared Wisdom after registration
-      function showSharedWisdom() {
-        document.getElementById('sharedWisdomBtn').classList.remove('hidden');
-      }
-
-      // Simulate user registration (uncomment to test)
-      // showSharedWisdom();
-    </script>
-
-    <!-- Mobile responsiveness with Tailwind -->
+    <link rel="stylesheet" href="style.css" />
     <style>
-      /* For mobile devices, make the navigation vertical */
-      @media (max-width: 640px) {
-        nav {
-          flex-direction: column;
-          align-items: center;
-        }
-        nav a {
-          padding: 10px 0;
-        }
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #0d0d0d;
+        color: white;
+        overflow-x: hidden;
       }
-
-      /* Ensure buttons and text scale well on mobile */
-      @media (max-width: 640px) {
-        .text-xl {
-          font-size: 1.5rem;
-        }
-        .text-4xl {
-          font-size: 2rem;
-        }
+      header {
+        background-color: #111;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h1 {
+        font-size: 1.5rem;
+        margin: 0;
+        letter-spacing: 1px;
+      }
+      nav {
+        display: flex;
+        gap: 1rem;
+      }
+      nav a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+      nav a:hover {
+        color: white;
+      }
+      .access-button {
+        background-color: #0f0;
+        color: black;
+        padding: 0.5rem 1rem;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background-color 0.3s;
+      }
+      .access-button:hover {
+        background-color: #0c0;
+      }
+      .hero {
+        text-align: center;
+        padding: 5rem 2rem;
+      }
+      .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+        color: #aaa;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      footer {
+        background-color: #111;
+        color: #666;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.8rem;
       }
     </style>
+  </head>
+  <body>
+    <header>
+      <h1>Circle of the Living FORCE!</h1>
+      <button class="access-button">Access</button>
+    </header>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contact</a>
+      <a href="#">Login</a>
+      <a href="#">Signup</a>
+      <a href="#">Shared Wisdom</a>
+    </nav>
+
+    <section class="hero">
+      <h2>Welcome to the Circle</h2>
+      <p>A place of mutual support, shared legacy, and living strength. Step in only by invitation.</p>
+    </section>
+
+    <footer>
+      &copy; 2025 Circle of the Living FORCE! All rights reserved.
+    </footer>
   </body>
 </html>
