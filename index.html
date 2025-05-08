@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Circle of the Living FORCE!</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
-    }
-  </style>
-</head>
-<body class="text-white font-sans">
-  <div class="flex justify-end p-4">
-    <button class="text-sm underline hover:text-gray-400">En | Ru</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle of the Living FORCE!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white min-h-screen">
 
-  <div class="flex flex-col items-center justify-center min-h-screen -mt-16">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center">
-      Circle of the Living <span class="text-yellow-400">FORCE!</span>
-    </h1>
-    <a href="access.html" class="mt-4 px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-full shadow-lg transition">
-      Access
-    </a>
-  </div>
-</body>
+    <!-- Главная обложка -->
+    <div id="landing" class="flex flex-col items-center justify-center min-h-screen">
+      <h1 class="text-4xl md:text-6xl font-bold mb-8">
+        Circle of the Living <span class="text-yellow-400">FORCE!</span>
+      </h1>
+      <button id="accessBtn" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-6 rounded-full">
+        Access
+      </button>
+    </div>
+
+    <!-- Рабочая панель (изначально скрыта) -->
+    <div id="mainPanel" class="hidden flex flex-col min-h-screen">
+      <nav class="bg-gray-900 text-white p-4 flex flex-wrap justify-center gap-4 text-lg">
+        <a href="#" class="hover:text-yellow-400">Home</a>
+        <a href="#" class="hover:text-yellow-400">About Us</a>
+        <a href="#" class="hover:text-yellow-400">Faq</a>
+        <a href="#" class="hover:text-yellow-400">Contact us</a>
+        <a href="#" class="hover:text-yellow-400">Login</a>
+        <a href="#" class="hover:text-yellow-400">Signup</a>
+        <a href="#" class="hover:text-yellow-400">Shared Wisdom</a>
+      </nav>
+      <div class="flex-grow flex items-center justify-center">
+        <p class="text-xl">Welcome to the Circle...</p>
+      </div>
+    </div>
+
+    <script>
+      // Показать панель после нажатия Access
+      document.getElementById('accessBtn').addEventListener('click', () => {
+        document.getElementById('landing').style.display = 'none';
+        document.getElementById('mainPanel').style.display = 'flex';
+      });
+    </script>
+
+  </body>
 </html>
