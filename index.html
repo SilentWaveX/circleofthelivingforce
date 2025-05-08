@@ -21,7 +21,7 @@
     <!-- Main panel (initially hidden) -->
     <div id="mainPanel" class="hidden flex flex-col min-h-screen bg-black">
       <!-- Navigation panel with black background -->
-      <nav class="bg-black text-white p-4 flex justify-center gap-4 text-lg">
+      <nav class="bg-black text-white p-4 flex flex-wrap justify-center gap-4 text-lg">
         <a href="#" class="hover:text-yellow-400">Home</a>
         <a href="#" id="sharedWisdomBtn" class="hover:text-yellow-400 hidden">Shared Wisdom</a>
         <a href="#" class="hover:text-yellow-400">About Us</a>
@@ -53,5 +53,28 @@
       // showSharedWisdom();
     </script>
 
+    <!-- Mobile responsiveness with Tailwind -->
+    <style>
+      /* For mobile devices, make the navigation vertical */
+      @media (max-width: 640px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+        nav a {
+          padding: 10px 0;
+        }
+      }
+
+      /* Ensure buttons and text scale well on mobile */
+      @media (max-width: 640px) {
+        .text-xl {
+          font-size: 1.5rem;
+        }
+        .text-4xl {
+          font-size: 2rem;
+        }
+      }
+    </style>
   </body>
 </html>
