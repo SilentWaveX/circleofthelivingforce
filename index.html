@@ -9,11 +9,15 @@
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         h1 {
             font-size: 48px;
             color: white;
+            text-align: center;
+            margin-top: 150px;
         }
 
         .yellow {
@@ -23,11 +27,14 @@
         .button {
             background-color: yellow;
             color: black;
-            padding: 10px 20px;
+            padding: 15px 30px;
             border: none;
             cursor: pointer;
             border-radius: 12px;
-            margin: 10px;
+            text-align: center;
+            display: block;
+            margin: 50px auto;
+            font-size: 18px;
         }
 
         .language-switcher {
@@ -49,71 +56,33 @@
             background-color: yellow;
             color: black;
         }
-
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-top: 30px;
-        }
-
-        .referral-link {
-            margin-top: 20px;
-            color: yellow;
-        }
     </style>
 </head>
 <body>
-
-    <!-- Переключатель языка -->
     <div class="language-switcher">
-        <button onclick="switchLanguage('en')">En</button>
-        <button onclick="switchLanguage('ru')">Ru</button>
+        <!-- Language switcher -->
+        <button onclick="switchLanguage('en')">EN</button>
+        <button onclick="switchLanguage('ru')">RU</button>
     </div>
-
-    <!-- Название сайта -->
+    
+    <!-- Site title -->
     <h1>Circle of the Living <span class="yellow">FORCE!</span></h1>
-
-    <!-- Кнопка "Access" -->
+    
+    <!-- Button to proceed to registration page -->
     <button class="button" id="accessButton">Access</button>
 
-    <!-- Панель навигации -->
-    <div class="button-container" id="navigationPanel" style="display: none;">
-        <button class="button" id="homeButton">Home</button>
-        <button class="button" id="aboutButton">About Us</button>
-        <button class="button" id="faqButton">Faq</button>
-        <button class="button" id="contactButton">Contact Us</button>
-        <button class="button" id="loginButton">Login</button>
-        <button class="button" id="signupButton">Signup</button>
-        <button class="button" id="sharedWisdomButton">Shared Wisdom</button>
-        <div class="referral-link" id="referralLink"></div>
-    </div>
-
     <script>
-        // Функция для переключения языка
+        // Language switch function (currently just a placeholder)
         function switchLanguage(language) {
             alert('Language switched to: ' + language);
-            // Здесь можно добавить логику для переключения языка
+            // Logic to switch languages will be added later
         }
 
-        // Переход на панель навигации
+        // Redirect to the registration page when the button is clicked
         document.getElementById('accessButton').onclick = function() {
-            document.getElementById('navigationPanel').style.display = 'block'; // Показываем панель навигации
-            document.getElementById('accessButton').style.display = 'none'; // Скрываем кнопку Access
+            window.location.href = 'signup.html'; // Redirect to the signup page
         }
-
-        // Логика для отображения реферальной ссылки после подтверждения оплаты
-        function showReferralLink() {
-            const referralLink = document.createElement('a');
-            referralLink.href = "https://some-referral-link.com"; // Здесь будет реальная ссылка
-            referralLink.textContent = "Your Referral Link";
-            document.getElementById('referralLink').appendChild(referralLink);
-        }
-
-        // Временно показываем ссылку для демонстрации
-        setTimeout(showReferralLink, 2000); // Имитация появления ссылки через 2 секунды
     </script>
-
 </body>
 </html>
  
