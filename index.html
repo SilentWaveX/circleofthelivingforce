@@ -8,16 +8,16 @@
         body {
             background-color: black;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center; /* Center all text */
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 56px;
             color: white;
-            text-align: center;
-            margin-top: 150px;
+            margin-top: 200px; /* Adjusting the position lower */
         }
 
         .yellow {
@@ -40,7 +40,7 @@
         .language-switcher {
             position: absolute;
             top: 20px;
-            left: 20px;
+            right: 20px;
         }
 
         .language-switcher button {
@@ -60,12 +60,12 @@
 </head>
 <body>
     <div class="language-switcher">
-        <!-- Language switcher -->
+        <!-- Language switcher positioned at the top right corner -->
         <button onclick="switchLanguage('en')">EN</button>
         <button onclick="switchLanguage('ru')">RU</button>
     </div>
     
-    <!-- Site title -->
+    <!-- Site title moved lower to be centered -->
     <h1>Circle of the Living <span class="yellow">FORCE!</span></h1>
     
     <!-- Button to proceed to registration page -->
