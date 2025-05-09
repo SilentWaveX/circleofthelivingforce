@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Circle of the Living FORCE!</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background-color: #000;
+      background-color: black;
       color: white;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+    .force-yellow {
+      color: yellow;
+    }
+    #accessSection {
+      text-align: center;
+      margin-top: 50px;
+    }
+    #accessBtn {
+      background-color: yellow;
+      color: black;
+      padding: 15px 30px;
+      border: none;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    nav {
+      display: none;
+      margin-top: 40px;
       text-align: center;
     }
-
-    .container {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      border: 1px solid white;
+      padding: 10px 15px;
+      border-radius: 8px;
     }
-
-    h1 {
-      font-size: 3em;
-      font-weight: bold;
-    }
-
-    .force {
-      color: #FFD700; /* yellow */
-    }
-
-    .access-button {
-      margin-top: 20px;
-      padding: 10px 25px;
-      background-color: #FFD700;
-      border: none;
-      border-radius: 20px;
+    nav a:hover {
+      background-color: yellow;
       color: black;
-      font-weight: bold;
-      font-size: 1em;
-      cursor: pointer;
     }
-
+    #sharedWisdom {
+      display: none;
+    }
     .lang-switch {
       position: absolute;
       top: 20px;
@@ -50,17 +62,37 @@
       font-size: 1em;
       cursor: pointer;
     }
-
     .lang-switch:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <header>
+    Circle of the Living <span class="force-yellow">FORCE!</span>
+  </header>
+
   <div class="lang-switch">En | Ru</div>
-  <div class="container">
-    <h1>Circle of the Living <span class="force">FORCE!</span></h1>
-    <button class="access-button">Access</button>
+
+  <div id="accessSection">
+    <button id="accessBtn">Access</button>
   </div>
+
+  <nav id="mainNav">
+    <a href="#" id="home">Home</a>
+    <a href="#" id="about">About Us</a>
+    <a href="#" id="faq">Faq</a>
+    <a href="#" id="contact">Contact us</a>
+    <a href="#" id="login">Login</a>
+    <a href="#" id="signup">Signup</a>
+    <a href="#" id="sharedWisdom">Shared Wisdom</a>
+  </nav>
+
+  <script>
+    document.getElementById('accessBtn').addEventListener('click', function () {
+      document.getElementById('mainNav').style.display = 'block';
+      document.getElementById('accessSection').style.display = 'none';
+    });
+  </script>
 </body>
 </html>
