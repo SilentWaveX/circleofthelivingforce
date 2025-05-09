@@ -11,13 +11,17 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center; /* Center all text */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full screen height */
+            text-align: center;
         }
 
         h1 {
             font-size: 56px;
             color: white;
-            margin-top: 200px; /* Adjusting the position lower */
+            margin: 0; /* Remove margin */
         }
 
         .yellow {
@@ -33,7 +37,7 @@
             border-radius: 12px;
             text-align: center;
             display: block;
-            margin: 50px auto;
+            margin-top: 50px;
             font-size: 18px;
         }
 
@@ -65,7 +69,7 @@
         <button onclick="switchLanguage('ru')">RU</button>
     </div>
     
-    <!-- Site title moved lower to be centered -->
+    <!-- Site title now centered vertically and horizontally -->
     <h1>Circle of the Living <span class="yellow">FORCE!</span></h1>
     
     <!-- Button to proceed to registration page -->
@@ -85,4 +89,3 @@
     </script>
 </body>
 </html>
- 
