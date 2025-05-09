@@ -1,75 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circle of the Living FORCE!</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        h1 {
-            font-size: 48px;
-            color: white;
-        }
-
-        .yellow {
-            color: yellow;
-        }
-
-        .button {
-            background-color: yellow;
-            color: black;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 12px; /* Сглаженные углы */
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .language-switcher {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-
-        .language-switcher button {
-            background-color: transparent;
-            color: white;
-            border: 1px solid white;
-            padding: 5px 10px;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-
-        .language-switcher button:hover {
-            background-color: yellow;
-            color: black;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circle of the Living FORCE!</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 {
+      color: white;
+      font-size: 2.5em;
+    }
+    .yellow {
+      color: yellow;
+    }
+    .access-button {
+      background-color: yellow;
+      color: black;
+      padding: 1em 2em;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 2em;
+    }
+    .lang-switch {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+    }
+    .lang-switch button {
+      background: none;
+      border: 1px solid white;
+      color: white;
+      padding: 5px 10px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .lang-switch button:hover {
+      background: yellow;
+      color: black;
+    }
+  </style>
 </head>
 <body>
-    <div class="language-switcher">
-        <button onclick="switchLanguage('en')">En</button>
-        <button onclick="switchLanguage('ru')">Ru</button>
-    </div>
-    <h1>Circle of the Living <span class="yellow">FORCE!</span></h1>
-    <button class="button" id="accessButton">Access</button>
+  <div class="lang-switch">
+    <button disabled>En</button>
+  </div>
 
-    <script>
-        function switchLanguage(language) {
-            alert('Language switched to: ' + language);
-            // Здесь можно добавить логику для переключения языка
-        }
-
-        document.getElementById('accessButton').onclick = function() {
-            window.location.href = 'signup.html'; // Переход на страницу регистрации
-        }
-    </script>
+  <h1>Circle of the Living <span class="yellow">FORCE!</span></h1>
+  <button class="access-button" onclick="alert('Access coming soon')">Access</button>
 </body>
 </html>
+
+ 
