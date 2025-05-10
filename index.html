@@ -21,26 +21,19 @@
       color: yellow;
     }
     nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: block;
       margin-top: 40px;
-    }
-    .nav-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 15px;
+      text-align: center;
     }
     nav a {
+      margin: 10px 15px;
       color: white;
       text-decoration: none;
       font-size: 1.1em;
       border: 1px solid white;
       padding: 10px 15px;
       border-radius: 8px;
-      transition: 0.3s;
+      display: inline-block;
     }
     nav a:hover {
       background-color: yellow;
@@ -48,6 +41,7 @@
     }
     #sharedWisdom {
       display: none;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -57,24 +51,22 @@
   </header>
 
   <nav id="mainNav">
-    <div class="nav-row">
+    <div>
       <a href="#" id="home">Home</a>
       <a href="#" id="about">About Us</a>
       <a href="#" id="faq">Faq</a>
       <a href="#" id="contact">Contact us</a>
-    </div>
-    <div class="nav-row">
       <a href="#" id="login">Login</a>
       <a href="#" id="signup">Signup</a>
     </div>
-    <div class="nav-row">
+    <div>
       <a href="#" id="sharedWisdom">Shared Wisdom</a>
     </div>
   </nav>
 
   <script>
-    // Simulated condition: is the user confirmed?
-    const isRegisteredUser = true; // Set this dynamically in real use
+    // Simulated registration confirmation
+    const isRegisteredUser = true; // Change to false to test hidden state
 
     if (isRegisteredUser) {
       document.getElementById('sharedWisdom').style.display = 'inline-block';
