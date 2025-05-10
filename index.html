@@ -59,14 +59,14 @@
       <a href="#" id="login">Login</a>
       <a href="#" id="signup">Signup</a>
     </div>
-    <div>
-      <a href="#" id="sharedWisdom">Shared Wisdom</a>
+    <div id="sharedWisdom">
+      <a href="#">Shared Wisdom</a>
     </div>
   </nav>
 
   <script>
-    // Simulated registration confirmation
-    const isRegisteredUser = true; // Change to false to test hidden state
+    // Check registration status
+    const isRegisteredUser = true; // This would be set based on registration status
 
     if (isRegisteredUser) {
       document.getElementById('sharedWisdom').style.display = 'inline-block';
