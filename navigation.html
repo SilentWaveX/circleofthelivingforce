@@ -3,32 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navigation - Circle of the Living FORCE!</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Circle of the Living FORCE!</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 28px;
+    }
+
+    .title span {
+      color: yellow;
+    }
+
+    .language-switch {
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .nav-button {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-button:hover {
+      border-color: yellow;
+      color: yellow;
+    }
+
+    .hidden-button {
+      display: none;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-  <div class="language-toggle">
-    <a href="#">En</a> | <a href="#">Ru</a>
+  <header>
+    <div class="title">Circle of the Living <span>FORCE!</span></div>
+    <div class="language-switch">En | Ru</div>
+  </header>
+
+  <nav>
+    <button class="nav-button">Home</button>
+    <button class="nav-button">About Us</button>
+    <button class="nav-button">Faq</button>
+    <button class="nav-button">Contact us</button>
+    <button class="nav-button">Login</button>
+    <button class="nav-button">Signup</button>
+  </nav>
+
+  <div class="hidden-button" id="sharedWisdom">
+    <button class="nav-button">Shared Wisdom</button>
   </div>
 
-  <div class="main-container">
-    <h1 class="title">
-      Circle of the Living <span class="highlight">FORCE!</span>
-    </h1>
-
-    <nav class="nav-bar">
-      <a href="#" class="nav-link">Home</a>
-      <a href="#" class="nav-link">About Us</a>
-      <a href="#" class="nav-link">Faq</a>
-      <a href="#" class="nav-link">Contact Us</a>
-      <a href="#" class="nav-link">Login</a>
-      <a href="#" class="nav-link">Signup</a>
-    </nav>
-
-    <!-- Shared Wisdom button (hidden for now) -->
-    <div class="shared-wisdom" style="display: none;">
-      <a href="#" class="nav-link">Shared Wisdom</a>
-    </div>
-  </div>
+  <script>
+    // Simulate access after registration
+    const isRegistered = false; // Set to true to show "Shared Wisdom"
+    if (isRegistered) {
+      const wisdom = document.getElementById('sharedWisdom');
+      wisdom.style.display = 'flex';
+      wisdom.style.justifyContent = 'center';
+    }
+  </script>
 </body>
 </html>
