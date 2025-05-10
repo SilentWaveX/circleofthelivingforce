@@ -1,46 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Circle of the Living FORCE!</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2em;
-      color: #fff;
-    }
-    .force {
-      color: yellow;
-    }
-    #access-button {
-      background-color: yellow;
-      color: black;
-      padding: 1em 2em;
-      border: none;
-      border-radius: 10px;
-      font-size: 1.2em;
-      cursor: pointer;
-      margin-top: 2em;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Circle of the Living <span class="force">FORCE!</span></h1>
-  <button id="access-button" onclick="window.location.href='second_page.html'">Access</button>
+  <div class="language-toggle">
+    <a href="#">En</a> | <a href="#">Ru</a>
+  </div>
+
+  <div class="main-container">
+    <h1 class="title">
+      Circle of the Living <span class="highlight">FORCE!</span>
+    </h1>
+    <button class="access-button">Access</button>
+  </div>
 </body>
 </html>
