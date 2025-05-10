@@ -39,6 +39,21 @@
       margin: 0 0.5em;
       text-decoration: none;
     }
+    #nav-panel {
+      display: none;
+      background-color: #111;
+      padding: 1em;
+      margin-top: 4em;
+    }
+    #nav-panel a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    #nav-panel a:hover {
+      color: yellow;
+    }
   </style>
 </head>
 <body>
@@ -49,7 +64,23 @@
 
   <h1>Circle of the Living <span class="force">FORCE!</span></h1>
 
-  <button class="access-button">Access</button>
+  <button class="access-button" onclick="showPanel()">Access</button>
+
+  <div id="nav-panel">
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">FAQ</a>
+    <a href="#">Contact us</a>
+    <a href="#">Login</a>
+    <a href="#">Signup</a>
+  </div>
+
+  <script>
+    function showPanel() {
+      document.querySelector(".access-button").style.display = "none";
+      document.getElementById("nav-panel").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
