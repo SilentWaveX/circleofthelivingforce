@@ -37,79 +37,10 @@
       cursor: pointer;
       margin-top: 2em;
     }
-    #nav-panel {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #111;
-      padding: 1em 0;
-      text-align: center;
-    }
-    #nav-panel a {
-      display: inline-block;
-      margin: 0 1em;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    #signup-form {
-      display: none;
-      margin-top: 3em;
-      text-align: left;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    #signup-form input, #signup-form button {
-      width: 100%;
-      padding: 0.5em;
-      margin: 0.5em 0;
-    }
   </style>
 </head>
 <body>
   <h1>Circle of the Living <span class="force">FORCE!</span></h1>
-  <button id="access-button">Access</button>
-
-  <div id="nav-panel">
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Faq</a>
-    <a href="#">Contact us</a>
-    <a href="#">Login</a>
-    <a href="#">Signup</a>
-    <a href="#">Shared Wisdom</a>
-  </div>
-
-  <div id="signup-form">
-    <h2>Sign up to Stand Among Us</h2>
-    <form>
-      <label>Name:<br><input type="text"></label><br>
-      <label>Phone / Email:<br><input type="text"></label><br>
-      <label>Password:<br><input type="password"></label><br>
-      <label>Secret Question:<br><input type="text"></label><br>
-      <label>Secret Answer:<br><input type="text"></label><br><br>
-      <button type="submit">Stand Among Us</button>
-    </form>
-  </div>
-
-  <script>
-    document.getElementById("access-button").addEventListener("click", () => {
-      document.getElementById("nav-panel").style.display = "block";
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const signupLink = Array.from(document.querySelectorAll("#nav-panel a"))
-        .find(link => link.textContent.trim() === "Signup");
-      if (signupLink) {
-        signupLink.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.getElementById("signup-form").style.display = "block";
-        });
-      }
-    });
-  </script>
+  <button id="access-button" onclick="window.location.href='second_page.html'">Access</button>
 </body>
 </html>
