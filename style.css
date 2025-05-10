@@ -53,3 +53,30 @@ body {
 .access-button:hover {
   background-color: #ffd700;
 }
+.nav-bar {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.shared-wisdom {
+  margin-top: 20px;
+  text-align: center;
+}
