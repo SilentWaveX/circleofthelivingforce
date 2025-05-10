@@ -1,86 +1,101 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Circle of the Living FORCE!</title>
   <style>
     body {
-      margin: 0;
       background-color: #000;
-      color: white;
+      color: #fff;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2em;
       text-align: center;
-      padding-top: 20vh;
     }
     h1 {
-      font-size: 2.5em;
+      color: #fff;
     }
     .force {
       color: yellow;
     }
-    .access-button {
+    #access-button {
       background-color: yellow;
-      border: none;
+      color: black;
       padding: 1em 2em;
+      border: none;
+      border-radius: 10px;
       font-size: 1.2em;
       cursor: pointer;
       margin-top: 2em;
-      border-radius: 8px;
-    }
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 1em;
-    }
-    .lang-switch a {
-      color: white;
-      margin: 0 0.5em;
-      text-decoration: none;
     }
     #nav-panel {
       display: none;
-      background-color: #111;
-      padding: 1em;
-      margin-top: 4em;
+      margin-top: 2em;
     }
     #nav-panel a {
-      color: white;
-      margin: 0 1em;
+      display: block;
+      color: #fff;
       text-decoration: none;
-      font-size: 1.1em;
+      margin: 0.5em;
     }
-    #nav-panel a:hover {
-      color: yellow;
+    #signup-form {
+      display: none;
+      margin-top: 3em;
+      text-align: left;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #signup-form input, #signup-form button {
+      width: 100%;
+      padding: 0.5em;
+      margin: 0.5em 0;
     }
   </style>
 </head>
 <body>
-
-  <div class="lang-switch">
-    <a href="#">En</a> | <a href="#">Ru</a>
-  </div>
-
   <h1>Circle of the Living <span class="force">FORCE!</span></h1>
-
-  <button class="access-button" onclick="showPanel()">Access</button>
+  <button id="access-button">Access</button>
 
   <div id="nav-panel">
     <a href="#">Home</a>
     <a href="#">About Us</a>
-    <a href="#">FAQ</a>
+    <a href="#">Faq</a>
     <a href="#">Contact us</a>
     <a href="#">Login</a>
     <a href="#">Signup</a>
+    <a href="#">Shared Wisdom</a>
+  </div>
+
+  <div id="signup-form">
+    <h2>Sign up to Stand Among Us</h2>
+    <form>
+      <label>Name:<br><input type="text"></label><br>
+      <label>Phone / Email:<br><input type="text"></label><br>
+      <label>Password:<br><input type="password"></label><br>
+      <label>Secret Question:<br><input type="text"></label><br>
+      <label>Secret Answer:<br><input type="text"></label><br><br>
+      <button type="submit">Stand Among Us</button>
+    </form>
   </div>
 
   <script>
-    function showPanel() {
-      document.querySelector(".access-button").style.display = "none";
+    document.getElementById("access-button").addEventListener("click", () => {
       document.getElementById("nav-panel").style.display = "block";
-    }
-  </script>
+    });
 
+    document.addEventListener("DOMContentLoaded", () => {
+      const signupLink = Array.from(document.querySelectorAll("#nav-panel a"))
+        .find(link => link.textContent.trim() === "Signup");
+      if (signupLink) {
+        signupLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.getElementById("signup-form").style.display = "block";
+        });
+      }
+    });
+  </script>
 </body>
 </html>
