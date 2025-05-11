@@ -1,0 +1,10 @@
+{
+  "name": "circle-backend",
+  "version": "1.0.0",
+  "description": "Backend for Circle of the Living FORCE",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "type": "commonjs"
+}
