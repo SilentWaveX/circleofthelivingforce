@@ -2,20 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Circle of the Living FORCE!</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 20px;
+    }
+
+    .nav-panel a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      background-color: #222;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-panel a:hover {
+      background-color: #444;
+    }
+
+    @media (min-width: 768px) {
+      .nav-panel {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="language-toggle">
-    <a href="#">En</a> | <a href="#">Ru</a>
-  </div>
-
-  <div class="main-container">
-    <h1 class="title">
-      Circle of the Living <span class="highlight">FORCE!</span>
-    </h1>
-    <button class="access-button" onclick="window.location.href='second_page.html'">Access</button>
-  </div>
+  <nav class="nav-panel">
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">FAQ</a>
+    <a href="#">Contact</a>
+  </nav>
 </body>
 </html>
