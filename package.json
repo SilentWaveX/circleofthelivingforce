@@ -1,0 +1,17 @@
+{
+  "name": "circleofthelivingforce",
+  "version": "1.0.0",
+  "description": "Backend server for Circle of the Living FORCE!",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "stripe": "^12.21.0",
+    "mongoose": "^7.6.1",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  }
+}
