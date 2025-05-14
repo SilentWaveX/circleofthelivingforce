@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Access Panel</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Circle of the Living FORCE!</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .title span {
+      color: yellow;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .nav-button {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-button:hover {
+      border-color: yellow;
+      color: yellow;
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Faq</a>
-    <a href="#">Contact us</a>
-    <a href="#">Login</a>
-    <a href="#">Signup</a>
-    <a href="#">Shared Wisdom</a>
+
+  <header>
+    <div class="title">Circle of the Living <span>FORCE!</span></div>
+    <div class="language-switch">En | Ru</div>
+  </header>
+
+  <nav>
+    <button class="nav-button">Home</button>
+    <button class="nav-button">About Us</button>
+    <button class="nav-button">Faq</button>
+    <button class="nav-button">Contact us</button>
+    <button class="nav-button">Login</button>
+    <button class="nav-button">Signup</button>
   </nav>
+
 </body>
 </html>
-
