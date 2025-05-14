@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Legacy</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #ffff00;
+    }
+    .box {
+      border: 2px solid #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 400px;
+      margin: 2rem auto;
+      background-color: #111;
+    }
+    button {
+      background-color: #ffff00;
+      color: #000;
+      border: none;
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ffea00;
+    }
+    .note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Make Your Contribution</h1>
+
+  <div class="box">
+    <p><strong>Contribution Amount:</strong> 2.50 USD</p>
+    <p class="note">+ processing fee (paid by the contributor)</p>
+
+    <button onclick="confirmAge()">18+</button>
+
+    <div id="payment" style="display:none;">
+      <button onclick="makePayment()">Make Contribution</button>
+    </div>
+  </div>
+
+  <script>
+    function confirmAge() {
+      document.getElementById("payment").style.display = "block";
+    }
+
+    function makePayment() {
+      // Placeholder for Stripe integration
+      alert("Redirecting to payment...");
+      // In real case: redirect to Stripe Checkout session
+    }
+  </script>
+
+</body>
+</html>
