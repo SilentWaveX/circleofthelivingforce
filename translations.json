@@ -1,0 +1,56 @@
+{
+  "en": {
+    "signup": "Signup",
+    "name": "Your Name",
+    "email": "Email or Phone",
+    "password": "Password",
+    "secret_question": "Secret Question",
+    "secret_answer": "Secret Answer",
+    "register": "Register"
+  },
+  "ru": {
+    "signup": "Регистрация",
+    "name": "Ваше имя",
+    "email": "Эл. почта или телефон",
+    "password": "Пароль",
+    "secret_question": "Секретный вопрос",
+    "secret_answer": "Секретный ответ",
+    "register": "Зарегистрироваться"
+  },
+  "fr": {
+    "signup": "Inscription",
+    "name": "Votre nom",
+    "email": "E-mail ou téléphone",
+    "password": "Mot de passe",
+    "secret_question": "Question secrète",
+    "secret_answer": "Réponse secrète",
+    "register": "S'inscrire"
+  },
+  "es": {
+    "signup": "Registrarse",
+    "name": "Tu nombre",
+    "email": "Correo o teléfono",
+    "password": "Contraseña",
+    "secret_question": "Pregunta secreta",
+    "secret_answer": "Respuesta secreta",
+    "register": "Registrar"
+  },
+  "ar": {
+    "signup": "تسجيل",
+    "name": "اسمك",
+    "email": "البريد الإلكتروني أو الهاتف",
+    "password": "كلمة المرور",
+    "secret_question": "سؤال سري",
+    "secret_answer": "إجابة سرية",
+    "register": "تسجيل"
+  },
+  "zh": {
+    "signup": "注册",
+    "name": "你的名字",
+    "email": "电子邮件或电话",
+    "password": "密码",
+    "secret_question": "密保问题",
+    "secret_answer": "密保答案",
+    "register": "注册"
+  }
+}
