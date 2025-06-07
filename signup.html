@@ -5,18 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Signup</title>
   <link rel="stylesheet" href="style.css"/>
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 14px;
+    }
+
+    .language-switch select {
+      padding: 4px 8px;
+      border-radius: 5px;
+      border: none;
+      font-size: 14px;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 12px;
+    }
+
+    .access-button {
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .access-button:hover {
+      background-color: #ffe600;
+    }
+  </style>
+
+  <script>
+    function changeLanguage(lang) {
+      console.log("Selected language:", lang);
+      // Translation functionality will be added later
+    }
+  </script>
 </head>
+
 <body>
+
+  <div class="language-switch">
+    <label for="language-select" style="margin-right: 8px;">Language:</label>
+    <select id="language-select" onchange="changeLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="ru">Russian</option>
+      <option value="fr">French</option>
+      <option value="es">Spanish</option>
+      <option value="ar">Arabic</option>
+      <option value="zh">Chinese</option>
+    </select>
+  </div>
+
   <div class="centered">
     <h2>Signup</h2>
     <form action="#" method="post">
-      <input type="text" placeholder="Your Name" required><br><br>
-      <input type="email" placeholder="Email or Phone" required><br><br>
-      <input type="password" placeholder="Password" required><br><br>
-      <input type="text" placeholder="Secret Question" required><br><br>
-      <input type="text" placeholder="Secret Answer" required><br><br>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Email or Phone" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <input type="text" placeholder="Secret Question" required><br>
+      <input type="text" placeholder="Secret Answer" required><br>
       <button type="submit" class="access-button">Register</button>
     </form>
   </div>
+
 </body>
 </html>
