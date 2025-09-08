@@ -1,5 +1,16 @@
 {
   "ar": {
+    "title": "دائرة القوة الحية!",
+    "access": "الوصول",
+    "nav": {
+      "home": "الرئيسية",
+      "about": "معلومات عنا",
+      "faq": "الأسئلة الشائعة",
+      "contact": "اتصل بنا",
+      "login": "تسجيل الدخول",
+      "signup": "التسجيل",
+      "sharedWisdom": "الحكمة المشتركة"
+    },
     "signup": "التسجيل",
     "yourName": "اسمك",
     "emailOrPhone": "البريد الإلكتروني أو الهاتف",
@@ -9,6 +20,17 @@
     "register": "تسجيل"
   },
   "zh": {
+    "title": "生命力量之环!",
+    "access": "进入",
+    "nav": {
+      "home": "首页",
+      "about": "关于我们",
+      "faq": "常见问题",
+      "contact": "联系我们",
+      "login": "登录",
+      "signup": "注册",
+      "sharedWisdom": "共享智慧"
+    },
     "signup": "注册",
     "yourName": "你的名字",
     "emailOrPhone": "电子邮件或电话",
@@ -18,6 +40,17 @@
     "register": "注册"
   },
   "en": {
+    "title": "Circle of the Living FORCE!",
+    "access": "Access",
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "faq": "FAQ",
+      "contact": "Contact us",
+      "login": "Login",
+      "signup": "Signup",
+      "sharedWisdom": "Shared Wisdom"
+    },
     "signup": "Signup",
     "yourName": "Your Name",
     "emailOrPhone": "Email or Phone",
@@ -27,6 +60,17 @@
     "register": "Register"
   },
   "fr": {
+    "title": "Cercle de la FORCE Vivante!",
+    "access": "Accéder",
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "faq": "FAQ",
+      "contact": "Contactez-nous",
+      "login": "Connexion",
+      "signup": "Inscription",
+      "sharedWisdom": "Sagesse Partagée"
+    },
     "signup": "Inscription",
     "yourName": "Votre nom",
     "emailOrPhone": "E-mail ou téléphone",
@@ -36,6 +80,17 @@
     "register": "S'inscrire"
   },
   "ru": {
+    "title": "Круг ЖиваЯ СИЛА!",
+    "access": "Войти",
+    "nav": {
+      "home": "Главная",
+      "about": "О нас",
+      "faq": "Вопросы и ответы",
+      "contact": "Связаться с нами",
+      "login": "Войти",
+      "signup": "Регистрация",
+      "sharedWisdom": "Общая мудрость"
+    },
     "signup": "Регистрация",
     "yourName": "Ваше имя",
     "emailOrPhone": "Почта или телефон",
@@ -45,6 +100,17 @@
     "register": "Зарегистрироваться"
   },
   "es": {
+    "title": "¡Círculo de la FUERZA Viva!",
+    "access": "Acceso",
+    "nav": {
+      "home": "Inicio",
+      "about": "Sobre nosotros",
+      "faq": "Preguntas frecuentes",
+      "contact": "Contáctanos",
+      "login": "Iniciar sesión",
+      "signup": "Registro",
+      "sharedWisdom": "Sabiduría Compartida"
+    },
     "signup": "Registro",
     "yourName": "Tu nombre",
     "emailOrPhone": "Correo electrónico o teléfono",
