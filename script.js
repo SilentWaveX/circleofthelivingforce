@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const langSwitch = document.querySelector(".language-switch");
     const title = document.getElementById("title");
-
+const accessBtn = document.getElementById("accessBtn");
     const translations = {
     EN: {
         title: "Circle of the Living FORCE!",
@@ -40,9 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
             let lang = langs[index];
             langSwitch.textContent = lang;
 
-            if (title && translations[lang]) {
-                title.innerHTML = translations[lang];
-            }
+            if (translations[lang]) {
+    if (title) title.innerHTML = translations[lang].title;
+    if (accessBtn) accessBtn.textContent = translations[lang].button;
+}
         });
     }
 });
