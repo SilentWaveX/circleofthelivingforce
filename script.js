@@ -3,13 +3,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const title = document.getElementById("title");
 
     const translations = {
-        EN: "Circle of the Living FORCE!",
-        RU: "Круг ЖиваЯ СИЛА!",
-        ES: "Círculo de la Fuerza Viva!",
-        ZH: "生命之力之环!",
-        AR: "دائرة القوة الحية!",
-        FR: "Cercle de la Force Vivante!"
-    };
+    EN: {
+        title: "Circle of the Living FORCE!",
+        button: "Access"
+    },
+    RU: {
+        title: "Круг ЖиваЯ СИЛА!",
+        button: "Доступ"
+    },
+    ES: {
+        title: "Círculo de la Fuerza Viva!",
+        button: "Acceso"
+    },
+    ZH: {
+        title: "生命之力之环!",
+        button: "进入"
+    },
+    AR: {
+        title: "دائرة القوة الحية!",
+        button: "دخول"
+    },
+    FR: {
+        title: "Cercle de la Force Vivante!",
+        button: "Accès"
+    }
+};
 
     let langs = ["EN", "RU", "ES", "ZH", "AR", "FR"];
     let index = 0;
