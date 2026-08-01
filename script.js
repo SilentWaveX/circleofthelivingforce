@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (accessBtn) {
         accessBtn.addEventListener("click", function () {
-            window.location.href = "second_page.html";
+            window.location.href = "second_page.html?lang=" + langs[index];
         });
     }
 });
