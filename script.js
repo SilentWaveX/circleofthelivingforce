@@ -31,7 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     let langs = ["EN", "RU", "ES", "ZH", "AR", "FR"];
-    let index = 0;
+    const urlParams = new URLSearchParams(window.location.search);
+const currentLang = urlParams.get("lang");
+
+let index = langs.indexOf(currentLang);
+if (index === -1) index = 0;
 
     if (langSwitch) {
         langSwitch.textContent = langs[index];
